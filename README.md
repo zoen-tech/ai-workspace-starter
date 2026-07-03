@@ -63,14 +63,25 @@ Cursor / Antigravity / VS Code（GitHub Copilot）の場合は、アプリでこ
 your-name-workspace/                 ← 親フォルダ（すべてをここに集約）
 ├── CLAUDE.md / AGENTS.md            ← AIへの指示書（全体の地図・共通ルール）
 ├── repo_company-common/             ← 全員共通の情報（テンプレート・一覧類）
-│   └── CLAUDE.md / AGENTS.md        ← このリポジトリ専用のルール（各リポジトリに置く）
 ├── repo_business-a/                 ← 事業・業務領域ごとのリポジトリ
+│   ├── CLAUDE.md / AGENTS.md        ← このリポジトリ専用のルール（各リポジトリに置く）
+│   ├── marketing/                   ← 施策・企画
+│   ├── operations/                  ← 日々の運用・マニュアル
+│   ├── reports/                     ← 定例レポート
+│   └── docs/                        ← 資料・議事録
 ├── repo_business-b/
 ├── repo_company-client-x/           ← クライアントごとのリポジトリ（担当者のみアクセス）
 ├── repo_company-finance/            ← 機密度の高い領域（アクセスを強く限定）
+│   ├── monthly/                     ← 月次の数字まとめ
+│   ├── invoices/                    ← 請求・支払い
+│   └── contracts/                   ← 契約書
 ├── repo_company-knowledge/          ← チームで共有するナレッジ（業務の原理原則の蓄積場所）
+│   ├── writing.md                   ← 例：文章・表現の原則
+│   └── analysis.md                  ← 例：分析の品質基準
 ├── repo_workspace-setup/            ← チーム利用時のみ：構成の管理・同期スクリプト
-└── downloads/                       ← ローカル専用フォルダ（Git管理しない一時置き場）
+├── websites/                        ← ローカル専用：複数のWebサイトリポジトリのまとめ場所
+│   └── repo_website-example-com/    ← まとめフォルダの中は個別にGit管理
+└── gdrive/                          ← ローカル専用：クラウドから取得したファイルの一時置き場
 ```
 
 - `repo_` が付くフォルダはGit管理（変更履歴が残る）、付かないフォルダはローカル専用、と名前だけで見分けられます
