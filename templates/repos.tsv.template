@@ -1,0 +1,24 @@
+# リポジトリ・マニフェスト（単一の正）
+# 形式: <org/repo><TAB><ローカルパス（ワークスペース直下からの相対）><TAB><区分>
+# - タブ区切り。# 始まりの行と空行は無視される
+# - 区分は自由に定義してよい。例: common（全員） / business（案件単位で権限付与） / restricted（限定） / external（参照専用） / personal（各自が自分のものに置き換え）
+# - ただし external / personal / skip の3つは sync-repos.sh が特別扱いする予約語
+#   （external・personalのorgはドリフト検査対象外、skipはcloneしない）
+# - ローカルフォルダ名は "repo_" プレフィックスを付ける
+#
+# 以下はプレースホルダ。自分たちのリポジトリに書き換えること。
+
+# --- 共通（全メンバー） ---
+your-org/your-org-common	repo_your-org-common	common
+your-org/your-org-knowledge	repo_your-org-knowledge	common
+your-org/workspace-setup	repo_workspace-setup	common
+
+# --- 業務領域（案件単位で権限付与） ---
+your-org/business-a	repo_business-a	business
+your-org/client-example	repo_your-org-client-example	business
+
+# --- 限定アクセス ---
+your-org/finance	repo_your-org-finance	restricted
+
+# --- 個人（各メンバーが自分のものに置き換える） ---
+your-account/personal-context	repo_personal	personal
