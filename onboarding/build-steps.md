@@ -8,6 +8,8 @@
 mkdir ~/[名前]-workspace
 ```
 
+Q1-2 で別の場所を指定された場合は、そのパスに読み替える（以降のステップも同様）。
+
 作成したら `setup-notes.md` をこの直下に書き出す（ヒアリング回答＋進捗）。
 
 ## Step 2：ワークスペース直下のコンテキストファイル
@@ -19,6 +21,8 @@ mkdir ~/[名前]-workspace
 - 両方 → 同一内容で両方を生成し、「片方を更新したらもう片方も更新する」旨をファイル内に明記する（テンプレートに該当行あり）
 
 テンプレートの各セクションは、ヒアリングで該当しなかったもの（チーム同期など）を削除してよい。**逆に、テンプレートにない独自ルールをユーザーが持っている場合は「基本ルール」に追記する。**
+
+プレースホルダのうちヒアリングで直接聞いていないもの（機密情報の種類など）は、AIの想像で埋めず、置換前にユーザーに確認する。
 
 生成後、未使用の `{{IF_...}}` ブロック・未置換のプレースホルダ・テンプレート冒頭のHTMLコメントが残っていないことを必ず確認する。
 
@@ -42,7 +46,7 @@ mkdir ~/[名前]-workspace
 1. `repo_workspace-setup` フォルダを作成し、GitHubにもリポジトリを作成する
 2. `templates/repos.tsv.template` → `scripts/repos.tsv` として配置し、Step 3 で作った全リポジトリを記載する
 3. `templates/scripts/sync-repos.sh` と `templates/scripts/setup-workspace.sh` を `scripts/` にコピーする
-4. `templates/workspace-context.md` から生成したコンテキストファイルを、テンプレート原本として `templates/CLAUDE.md`（Codex利用時は `templates/AGENTS.md`）に格納する（メンバー配布用マスター。`setup-workspace.sh` がこのパスからコピーする）。**利用するAIのテンプレートだけを置くこと**（templates/ に置いたものがそのままメンバーに配布される）
+4. `templates/workspace-context.md` から生成したコンテキストファイルを、テンプレート原本として `templates/CLAUDE.md`（Codex利用時は `templates/AGENTS.md`）に格納する（メンバー配布用マスター。`setup-workspace.sh` がこのパスからコピーする）。**利用するAIのテンプレートだけを置くこと**（templates/ に置いたものがそのままメンバーに配布される。Q0-1で「両方」の場合は両方置く）
 5. メンバー向け README を書く（clone → `setup-workspace.sh` 実行、の導線）
 6. コミット＆push
 
