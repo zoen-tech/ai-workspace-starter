@@ -64,6 +64,8 @@ claude   # Claude Code の場合
 codex    # Codex の場合
 ```
 
+Cursor / Antigravity / VS Code（GitHub Copilot）の場合は、アプリでこのフォルダを開き、チャット（エージェントモード）を使ってください。
+
 起動したら、こう話しかけてください：
 
 > ワークスペースをセットアップして
@@ -74,7 +76,7 @@ AIがあなたの業務内容をヒアリングしながら、あなた専用の
 
 - macOS または Linux（Windows は WSL 推奨）
 - Git がインストール済み
-- Claude Code または Codex がインストール済み（インストール方法は各ツールの公式ドキュメントを参照）
+- AIエージェントがインストール済み — Claude Code / Codex / Cursor / Antigravity / VS Code（GitHub Copilot）のいずれか（インストール方法は各ツールの公式ドキュメントを参照）
   - Codex の場合、ワークスペース作成先（ホームディレクトリ等）への書き込みを許可するサンドボックス設定が必要になることがあります（拒否されたらAIが設定変更を案内します）
 - （任意）GitHub アカウント — **無くても始められます**。標準の流れは「まずローカルだけで構築し、チーム共有やバックアップが必要になったら後からGitHubを導入する」です（チームで使う場合は GitHub Organization を推奨）
 

@@ -11,9 +11,10 @@
 **Q0-1.** 「普段の業務ではどのAIエージェントを使いますか？」
 1. Claude Code
 2. Codex
-3. 両方
+3. Cursor / Antigravity / VS Code（GitHub Copilot）など、その他のAIエージェント
+4. 複数を併用する（併用するツールを聞く）
 
-【生成するコンテキストファイルを決める：Claude Code → `CLAUDE.md` / Codex → `AGENTS.md` / 両方 → 両方を同一内容で生成。以降このスクリプトで「コンテキストファイル」とあれば、この回答に応じたファイル名に読み替える】
+【生成するコンテキストファイルを決める：Claude Code → `CLAUDE.md`。Codex・Cursor・Antigravity・VS Code（Copilot）などその他の主要ツールは、いずれも業界標準の `AGENTS.md` を読む → `AGENTS.md`。複数併用で Claude Code を含む場合 → `CLAUDE.md` と `AGENTS.md` を同一内容で両方生成（Claude Code を含まない併用は `AGENTS.md` 1つでよい）。以降このスクリプトで「コンテキストファイル」とあれば、この回答に応じたファイル名に読み替える】
 
 ---
 

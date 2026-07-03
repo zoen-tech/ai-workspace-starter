@@ -1,7 +1,7 @@
 <!--
 このファイルはテンプレートです。
 `{{ }}` をヒアリング結果で置換し、ワークスペース直下に
-CLAUDE.md（Claude Code）または AGENTS.md（Codex）として保存してください。
+CLAUDE.md（Claude Code）または AGENTS.md（Codex・Cursor・Antigravity・VS Code等）として保存してください。
 該当しないセクション（例：個人利用ならチーム同期）は削除して構いません。
 このコメントブロックも生成時に削除してください。
 -->
@@ -17,7 +17,7 @@ CLAUDE.md（Claude Code）または AGENTS.md（Codex）として保存してく
 - `repo_` プレフィックスのフォルダ → Gitリポジトリ
 - プレフィックスなしのフォルダ → ローカル専用（{{LOCAL_FOLDERS（例：`downloads/` 等、Q4-3の回答）}}）
 {{IF_TEAM（チーム利用の場合のみ）: - ワークスペース直下のこのファイルは各メンバーのローカルファイル（Git管理なし）。ブラッシュアップやナレッジの追加があった場合は、workspace-setup リポジトリのテンプレート原本にも内容を反映し、コミット＆プッシュすること}}
-{{IF_BOTH_AI（Claude CodeとCodex併用の場合のみ）: - `CLAUDE.md` と `AGENTS.md` は同一内容を保つ。片方を更新したら必ずもう片方も更新する}}
+{{IF_BOTH_AI（Claude Codeと他ツールを併用する場合のみ）: - `CLAUDE.md` と `AGENTS.md` は同一内容を保つ。片方を更新したら必ずもう片方も更新する}}
 
 ## リポジトリ一覧
 
