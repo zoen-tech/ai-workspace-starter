@@ -1,6 +1,10 @@
-# AI Workspace Starter
+# AI Workspace Starter — by ZOEN-TECH
 
 Claude Code / Codex と一緒に働く「AIワークスペース」を、AIとの対話だけで構築するためのスターターキットです。
+
+> **提供：[ZOEN-TECH株式会社](https://zoen-tech.co.jp/)**
+> クリニックのマーケティング総合支援・SEOコンサルティング・サイト制作を行う、医師が代表のマーケティング支援会社です。このスターターキットは、当社が自社の業務基盤として日々運用しているAIワークスペースの設計を、汎用化して公開したものです。
+> AIワークスペースの導入支援・研修・講座のご相談は **[お問い合わせ](https://zoen-tech.co.jp/contact/)** からお気軽にどうぞ。
 
 ## AIワークスペースとは
 
