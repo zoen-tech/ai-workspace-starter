@@ -76,3 +76,5 @@ codex exec --skip-git-repo-check --sandbox workspace-write "image_gen ツール�
 ---
 
 この使い分けルールをワークスペースのコンテキストファイル（CLAUDE.md / AGENTS.md）に書いておけば、以降は「〜のバナーを作って」「料金表の画像にして」と言うだけで、AIが適切な作り方を選んで検品まで実行するようになります。
+
+応用編の続きとして、Gitに入れられないローカル専用ファイル（`.env`・認証情報・AIの設定）を暗号化して自動バックアップする仕組みを [08-local-backup.md](08-local-backup.md) で扱っています。
