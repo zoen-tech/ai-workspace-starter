@@ -89,6 +89,7 @@ CLAUDE.md（Claude Code）または AGENTS.md（Codex・Cursor・Antigravity・V
 | 就寝中・外出中も走らせ続けたい作業 | 母艦のスペックを超える重い単発処理 |
 
 - 定期実行ジョブを新設するときは、原則母艦（launchd/cron）に置く前提で設計する
+- 一発ジョブ（期日リマインド・予約実行）は launchd 登録を1件ずつ増やさず、受け皿ジョブ1本の待ち行列に置く（macOS は launchd ジョブを登録するたびに「バックグラウンド項目が追加されました」を通知し、ログイン項目が実行プログラム名で埋まるため。実装例 → `templates/scripts/oneoff-dispatch.sh`、手順 → `tutorial/09-oneoff-jobs.md`）
 - 母艦の障害時に備え、フォールバック手順（診断コマンド・手元マシンでの継続手順・復旧確認）をrunbookとして残しておく}}
 
 ### 意思決定ログの記録

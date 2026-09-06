@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  担当: {{OWNER}}／変更ポリシー: 自由
+  台帳: <共通リポジトリ>/docs/jobs-registry.md
+  用途: 一発ジョブ（期日リマインド等）の受け皿。5分ごとに ~/jobs/oneoff/queue/ を見て期日が来たものを実行する。
+        一発ジョブごとに plist を作らないための唯一の登録（作るたびに macOS が通知を出すため）。
+  install:   mkdir -p ~/.local/state/oneoff-dispatch   （launchd はログの親フォルダを作らない）
+             cp <このファイル> ~/Library/LaunchAgents/ && launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.{{ORG}}.workspace-oneoff-dispatch.plist
+  uninstall: launchctl bootout gui/$(id -u)/com.{{ORG}}.workspace-oneoff-dispatch
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.{{ORG}}.workspace-oneoff-dispatch</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>{{WORKSPACE}}/repo_workspace-setup/scripts/oneoff-dispatch.sh</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>300</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>{{HOME}}/.local/state/oneoff-dispatch/launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>{{HOME}}/.local/state/oneoff-dispatch/launchd.log</string>
+</dict>
+</plist>
